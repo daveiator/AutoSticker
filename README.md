@@ -1,26 +1,20 @@
-# Auto-Sticker Node (V1.0):
+# Auto-Sticker
+##### V2.0
+![Preview](/images/sticker_wall_flat.png)
+| **Node Overview** | ![node](/images/node.png) |
+| --- | --- |
+| **Seed** | Just a random seed input |
+| **Specular** | Controls how many stickers are glossy or metallic |
+| **Damage** | Controls the tear and wear effects of the stickers |
+| **Wrinkles** | Controls the bump mapping on the stickers |
 
-## Node Overview:
-    Glossy Paper Amount:  Controls how much paper is glossy (0 = node; 1 = all)
-    Paper Roughness:      Roughness of the paper shader
-    Warble Scale:         Scale of the warble-texture
-    Warble Strengh:       Intensity of the warbles
-    Wear Scale:           Scale of the rip-texture
-    Wear Roughness:       Detail Amount of the rip-texture
-    Wear Falloff:         Changes the amount of the half-torn paper
-    Wear Fac:             Intensity of the rips
-    Seed:                 Just a random seed input
-    ColorMap / Random:    Allows to use the Color Map in Cycles for getting the same randomness values between both render engines (Maybe good for Material Preview)
-    Random Color Map:      Input your "Random-Color-Per-Face"-Map here!
+* To use the stickers in your projects, simply append the AutoSticker Object.
 
+* To change out the image, go inside the "_AutoSticker Image" node.
 
-You can add object duplicates, linked duplicates or just add more faces in Edit-Mode. Note that each "Sticker-Square" takes up the entire uv grid!
+* You can add object duplicates, linked duplicates or just add more faces in Edit-Mode. Note that each "Sticker-Square" takes up the entire uv grid!
 
-Also, there is no "Random per Island" node in Eevee, so if you want that feature you'll have to run the script shown on the right, with the sticker object selected in the viewport. This assigns a random color to each face, but must be "rebaked" if new faces are added in the mesh.  
-
-If you want to add custom image clusers head into the other node group next to the main one. In it are two framed nodes which you'll have to change. One for the Image-Texture and the other one selects the number of lines and rows the image cluser has. (Yes it's 3-Axis, but that's just because blender doesn't have 2d-Vectors!)
-
-The "Object-Info"-node gets its random value from the object-name, so seeds are going to change when renaming objects. Just a heads up!
+* Also, there is no "Random per Island" node in Eevee, so by default it uses a Geometry-Nodes Modifier which generates a random color-map dynamically. If this shader is mainly used in cycles, you can go into the "randomization settings" and use the "Random per Island" node instead.
 
 If you have any further questions, feel free to contact me via Discord.
 
@@ -28,19 +22,16 @@ If you have any further questions, feel free to contact me via Discord.
 Alright, have fun with it and stay awesome! :D
 
 
-## The Credit-Section 
+### ⭐The Credit-Section⭐ 
     
-    Original Sticker-Image provided to the public domain by Blender Bender
-        Discord: Blender Bender#2640
+* Original Sticker-Image provided to the public domain by EJ3d
+    * Instagram: [@ej3d_art](https://www.instagram.com/ej3d_art/)
+    * Youtube: [@EJ3D_Art](https://www.youtube.com/@EJ3D_Art)
 
-    HDRI from HDRI/Poly-Haven
-        https://polyhaven.com/hdris
+* All of the node stuff made by me
+    * Instagram: [@david_bhlr](https://www.instagram.com/david_bhlr/)
+    * Discord: daveiator#0922
 
+*19. November 2023*
 
-    All of the node stuff made by me, David Buehler
-        Discord: daveiator#0922
- 
-Also shoutout to that one guy in a forum, who shared the "randomFaces"-script! I can't seem to find the post anymore but it has prooven super useful in many projects! Thanks for that!
-
-
-22. July 2021
+**min. Blender Version 4.0**
